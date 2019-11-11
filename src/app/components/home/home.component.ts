@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from '../../services/spotify.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public NewReleases:Array<any>=[];
+
+  constructor(private _spotifyService:SpotifyService) { 
+    this._spotifyService.GETtNewRelase().subscribe((relases:any)=>{
+      this.NewReleases=relases.albums.items;
+      console.log(this.NewReleases);     
+    });
+    
+  }
 
   ngOnInit() {
   }

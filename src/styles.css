@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background: #2b303570;
+}
+
+#imglogo{
+    width: 35px;
+    height: 35px;
+}
+
+#j{
+    width: 350px;
+    height: 350px;
+}
+
+#tarjetass{
+    width: 80px;
+    height: 100px;
+}

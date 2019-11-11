@@ -1,1 +1,14 @@
-<p>hsdvf</p>
+<div class="card-columns" id="tarjetas">
+  <div class="card" *ngFor="let release of NewReleases">
+    <img [src]="release.images[1].url" class="card-img-top" alt="..." id="imgs">
+    <div class="card-body">
+      <h5 class="card-title">{{release.name}}</h5>
+      <p class="card-text">
+          <span class="badge-pill badge-danger" *ngFor="let artists of release.artists">
+              {{artists.name}}
+          </span>
+      </p>
+      <p class="card-text"><small class="text-muted">Release Date:{{release.release_date}}</small></p>
+    </div>
+  </div>
+</div>
